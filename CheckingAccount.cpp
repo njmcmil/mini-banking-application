@@ -5,7 +5,7 @@
 CheckingAccount::CheckingAccount(double b) : BankAccount(b) {}
 
 
-
+//Monthly fee based on balance, fee == 12
 void CheckingAccount::applyMonthlyFee(double fee)
 {
     if(getBalance() >= 1500)
@@ -17,7 +17,7 @@ void CheckingAccount::applyMonthlyFee(double fee)
     }
 }
 
-//Overriding Functions
+//Overriding withdraw to put in place an overdraft limit
 void CheckingAccount::Withdraw(double amount)
 {
     if (balance - amount >= -overdraftLimit)
@@ -29,7 +29,7 @@ void CheckingAccount::Withdraw(double amount)
     }
 }
 
-
+//Overriding Bank Account information for checking account
 void CheckingAccount::CreatedBankAccount()
 {
     std::cout << "*** Checking Account ***" << std::endl;

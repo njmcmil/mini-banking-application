@@ -3,7 +3,7 @@
 
 #include "BankAccount.h"
 
-//Standard CheckingAccount
+//Standard CheckingAccount : derived from bank account
 
 class CheckingAccount : public BankAccount 
 {

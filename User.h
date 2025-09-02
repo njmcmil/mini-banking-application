@@ -23,7 +23,7 @@ class User
 
 
     int generateRandomUserID();
-
+    
     int getUserID()      const { return userID; }
     string getUsername() const { return Username; }
     string getPassword() const { return password; }

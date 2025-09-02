@@ -3,6 +3,8 @@
 
 #include "BankAccount.h"
 
+//standard savings account : derived from bank account
+
 class SavingAccount : public BankAccount
 {
     protected:

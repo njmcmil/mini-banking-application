@@ -3,11 +3,15 @@
 
 SavingAccount::SavingAccount(double b) : BankAccount(b), numWithdrawalsThisMonth(0) {}
 
+
+//Monthly interest to a savings account
 void SavingAccount::applyMonthlyInterest(double apy)
 {
     balance += apy;
 }
 
+
+//Overriding withdraw so # of withdraws are limited
 void SavingAccount::Withdraw(double amount)
 {
     if(amount <= balance && numWithdrawalsThisMonth <= withdrawalMonthlyLimit)
@@ -21,7 +25,7 @@ void SavingAccount::Withdraw(double amount)
 }
 
 
-
+//Overriding Bank Account info for savings account
 void SavingAccount::CreatedBankAccount()
 {
     std::cout << "*** Savings Account ***" << std::endl;

@@ -3,6 +3,7 @@
 #include <iostream>
 #include <ctime>
 
+//An abstract class for a bank account in mini-banking-application
 
 class BankAccount 
 {
