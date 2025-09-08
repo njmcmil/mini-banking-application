@@ -5,15 +5,15 @@
 CheckingAccount::CheckingAccount(double b) : BankAccount(b) {}
 
 
-//Monthly fee based on balance, fee == 12
-void CheckingAccount::applyMonthlyFee(double fee)
+//Monthly fee based on balance, fee == $12
+void CheckingAccount::applyMonthlyFee()
 {
     if(getBalance() >= 1500)
     {
         std::cout << "Monthly fee waived.\n";
     } else
     {
-        Withdraw(12);
+        Withdraw(monthlyFee);
     }
 }
 

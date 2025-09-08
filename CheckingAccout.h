@@ -7,14 +7,14 @@
 
 class CheckingAccount : public BankAccount 
 {
-    private:
-        const double monthlyFee = 15;
+    protected:
+        const double monthlyFee = 12;
         const double overdraftLimit = 200;
 
     
     public:
     CheckingAccount(double b);
-    void applyMonthlyFee(double f);
+    void applyMonthlyFee();
     //tells compiler to override function
     void Withdraw(double amount) override;
     void CreatedBankAccount() override;
